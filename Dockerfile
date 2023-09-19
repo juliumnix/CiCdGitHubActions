@@ -14,7 +14,7 @@ RUN apt-get update && \
     mvn clean package
 
 # Copie o arquivo JAR gerado para o diretório de trabalho
-COPY target/aposta-api.jar .
+COPY /target/aposta-api.jar /app/aposta-api.jar
 
 # Comando para executar o aplicativo Java quando o contêiner for iniciado
 CMD ["java", "-jar", "aposta-api.jar"]
